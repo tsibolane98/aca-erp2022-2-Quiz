@@ -1,6 +1,11 @@
 import React from "react";
 
-const Score = ({ score, total }) => {
+interface Props {
+  score: number;
+  total: number;
+}
+
+const Score: React.FC<Props> = ({ score, total }) => {
   return (
     <div className="score">
       <h2>Your Score</h2>

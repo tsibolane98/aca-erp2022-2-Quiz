@@ -1,6 +1,12 @@
 import React from "react";
 
-const Option = ({ option, questionIndex, handleAnswerSelection }) => {
+interface Props {
+  option: string;
+  questionIndex: number;
+  handleAnswerSelection: (questionIndex: number, selectedOption: string) => void;
+}
+
+const Option: React.FC<Props> = ({ option, questionIndex, handleAnswerSelection }) => {
   return (
     <div className="option">
       <label>
